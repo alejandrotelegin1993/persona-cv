@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Александр Телегин — изделия из дерева и металла · визитка</title>
+<meta name="description" content="Визитка Александра Телегина: производство, продажа и установка изделий из дерева и металла — экраны для батарей, корзины для кондиционеров, декоративные панели, элементы дизайна.">
+<style>
+:root{
+  --bg:#f3f5f8; --ink:#1f2933; --muted:#5b6776; --card:#ffffff; --line:#dde3ea;
+  --accent:#3d6a94; --dark:#26323f; --work-bg:#e8edf3;
+  --map-land:#ffffff; --map-edge:#9fb2c6; --map-dot:#3d6a94; --map-hi:#e4ecf4;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:15px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;font-weight:700}
+h2{font-size:clamp(1.7rem,4vw,2.2rem);margin-bottom:.5em}
+h2::after{content:"";display:block;width:56px;height:3px;background:var(--accent);margin-top:.5em}
+h3{font-size:1.15rem;margin-bottom:.4em}
+strong{font-weight:650}
+section{padding:68px 0;scroll-margin-top:56px}
+p{margin-bottom:1em}
+
+/* меню */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(38,50,63,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,.08)}
+.topnav .wrap{display:flex;align-items:center;gap:18px;height:52px}
+.topnav .brand{color:#fff;text-decoration:none;font-family:var(--serif);font-weight:700;font-size:1.05rem;margin-right:auto;white-space:nowrap}
+.topnav ul{list-style:none;display:flex;gap:4px}
+.topnav ul a{display:block;color:#c9d6e3;text-decoration:none;font-size:.92rem;padding:6px 11px;border-radius:99px;transition:background .2s,color .2s}
+.topnav ul a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.topnav ul a.active{color:#fff;background:rgba(156,194,229,.22)}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:8px;width:38px;height:34px;font-size:1.1rem;cursor:pointer}
+.theme-toggle{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.35);
+  background:transparent;color:#fff;font-size:1rem;line-height:1;cursor:pointer}
+.theme-toggle:hover{background:rgba(255,255,255,.1)}
+
+/* hero */
+.hero{position:relative;isolation:isolate;color:#fff;padding:44px 0 40px;min-height:0;display:flex;align-items:flex-end;
+  background:radial-gradient(900px 420px at 85% 0%,rgba(61,106,148,.5),transparent 70%),var(--dark)}
+.hero .wrap{width:100%}
+figure{margin:0}
+figure img{display:block;width:100%;height:100%;object-fit:cover;border-radius:12px}
+figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 30px}
+.photos img{height:auto;aspect-ratio:1/1}
+.home-row{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.home-row ul,.sub ul{list-style:none}
+.home-row li,.sub li{padding:10px 0;border-top:1px solid var(--line);font-size:.98rem}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pair img{height:240px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.trio img{height:220px}
+.hero-row{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.hero-text{min-width:0}
+.me{flex:none;width:230px;height:230px;border-radius:50%;object-fit:cover;object-position:50% 50%;border:5px solid rgba(255,255,255,.9);box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;color:#9cc2e5;margin-bottom:14px}
+.hero h1{font-size:clamp(2rem,7vw,3.6rem);margin-bottom:.3em}
+.hero p{max-width:34em;font-size:clamp(1rem,2.2vw,1.1rem);color:#dbe4ee;margin-bottom:0}
+
+/* about */
+.cols{display:grid;grid-template-columns:1.4fr 1fr;gap:44px;align-items:start}
+.timeline{list-style:none}
+.timeline li{padding:14px 0 14px 28px;border-top:1px solid var(--line);position:relative}
+.timeline li::before{content:"";position:absolute;left:4px;top:24px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.side-photo{margin-top:22px}
+.side-photo img{height:420px;object-position:50% 30%}
+
+/* work */
+.work{background:var(--work-bg)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px}
+.card p{color:var(--muted);font-size:.96rem;margin:0}
+.work > .wrap > h3{margin-top:28px}
+.steps{margin:6px 0 26px}
+.resources{padding:22px 26px;border-radius:12px;background:var(--dark);color:#dbe4ee}
+.resources h3{color:#9cc2e5}
+.how{margin-top:22px;padding:24px 28px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px}
+
+/* facts */
+.sub{margin-top:40px}
+.sub > h3{font-size:1.4rem;color:var(--accent);margin-bottom:.6em}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.split figure img{height:300px}
+.split.reverse > figure{order:2}
+
+/* беларусь */
+.belarus{background:var(--work-bg)}
+.stat{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 22px}
+.stat span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 14px;font-size:.9rem}
+.stat b{color:var(--accent)}
+.map-row{display:grid;grid-template-columns:1.55fr 1fr;gap:24px;align-items:start}
+.map-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+#bymap{display:block;width:100%;height:auto}
+#bymap .obl{fill:var(--map-land);fill-rule:evenodd;stroke:var(--map-edge);stroke-width:1;stroke-dasharray:4 3;stroke-linejoin:round;transition:fill .2s}
+#bymap .obl.on{fill:var(--map-hi)}
+#bymap .border{fill:none;stroke:var(--map-edge);stroke-width:2.2;stroke-linejoin:round;pointer-events:none}
+.map-src{font-size:.75rem;color:var(--muted);margin:6px 4px 0}
+#bymap .city{cursor:pointer;outline:none}
+#bymap .city circle{fill:var(--map-dot);stroke:var(--card);stroke-width:2;transition:r .15s}
+#bymap .city text{font:600 13px var(--sans);fill:var(--ink);paint-order:stroke;stroke:var(--map-land);stroke-width:4px;stroke-linejoin:round;opacity:0;transition:opacity .15s;pointer-events:none}
+#bymap .city.major text{opacity:1}
+#bymap .city.capital circle{fill:#b5523b}
+#bymap .city:hover text,#bymap .city:focus text,#bymap .city.on text{opacity:1}
+#bymap .city:hover circle,#bymap .city:focus circle,#bymap .city.on circle{r:9}
+#bymap .city.on circle{stroke:var(--accent);stroke-width:3}
+.city-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px}
+.city-card .region{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:6px}
+.city-card h3{font-size:1.5rem;margin:0}
+.city-card .hint{color:var(--muted);font-size:.92rem;margin:0}
+.culture{margin-top:40px}
+.culture > h3{font-size:1.4rem;color:var(--accent);margin-bottom:.5em}
+.by-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.by-photos img{height:260px}
+
+/* contacts */
+.contacts-list{list-style:none;padding:0;margin-top:18px;display:grid;gap:12px}
+.contacts-list li{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.contacts-list .label{min-width:92px;color:var(--muted)}
+.contacts-list a{color:var(--accent);text-decoration:none}
+.contacts-list a:hover{text-decoration:underline}
+.messengers{display:inline-flex;gap:8px}
+.messengers a{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%;background:var(--card)}
+.messengers a:hover{border-color:var(--accent);text-decoration:none}
+.messengers svg{width:18px;height:18px;fill:var(--accent)}
+
+footer{padding:22px 0 36px;font-size:.8rem;color:var(--muted)}
+
+/* тёмная тема: фото приглушены, при наведении становятся светлыми */
+[data-theme="dark"]{
+  --bg:#12171d; --ink:#e3e8ee; --muted:#9aa6b4; --card:#1b232c; --line:#2c3743;
+  --accent:#7fb0dc; --work-bg:#171e26;
+  --map-land:#1f2934; --map-edge:#4a5b6d; --map-dot:#7fb0dc; --map-hi:#273544;
+  color-scheme:dark;
+}
+figure img,.me,.city-card img{filter:grayscale(1);transition:filter .35s ease}
+figure img:hover,.me:hover,.city-card img:hover{filter:none}
+[data-theme="dark"] figure img,[data-theme="dark"] .me,[data-theme="dark"] .city-card img{filter:grayscale(1) brightness(.5)}
+[data-theme="dark"] figure img:hover,[data-theme="dark"] .me:hover,[data-theme="dark"] .city-card img:hover{filter:none}
+
+@media (max-width:800px){
+  .map-row{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  section{padding:48px 0}
+  .hero{padding:44px 0 36px}
+  .cols,.split,.home-row{grid-template-columns:1fr;gap:16px}
+  .split.reverse > figure{order:0}
+  .photos{gap:8px}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card h3{hyphens:auto;overflow-wrap:break-word}
+  .hero-row{flex-direction:column-reverse;align-items:flex-start;gap:18px}
+  .me{width:150px;height:150px}
+  .trio img{height:150px}
+  .by-photos{grid-template-columns:1fr 1fr}
+  .by-photos figure:last-child{display:none}
+  .nav-toggle{display:block}
+  .topnav ul{display:none;position:absolute;top:52px;left:0;right:0;flex-direction:column;background:var(--dark);padding:8px 16px 14px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .topnav.open ul{display:flex}
+  .topnav ul a{padding:10px 12px}
+}
+
+/* печать / PDF */
+@page{size:A4;margin:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@media print{
+  footer,.topnav{display:none}
+  figure img,.me,.city-card img{filter:none !important}
+  section{padding:22px 0}
+  .hero{padding:24px 0}
+  .me{width:150px;height:150px}
+  .hero h1{font-size:2.6rem}
+  .cards{margin:10px 0}
+  .card{padding:12px 14px}
+  .timeline li{padding:7px 0 7px 28px;font-size:.93rem;line-height:1.55}
+  .timeline li::before{top:16px}
+  .work > .wrap > h3{margin-top:16px}
+  .steps{margin:4px 0 16px}
+  .resources{padding:16px 22px}
+  .how{margin-top:14px;padding:16px 22px}
+  #about p,#work p{line-height:1.6;margin-bottom:.7em}
+  #work,#facts,#belarus{break-before:page}
+  .card,.how,figure,.sub,.split,.home-row,.map-row,.culture,#contacts{break-inside:avoid}
+  .photos{grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:14px}
+  .photos figcaption{font-size:.7rem;line-height:1.3}
+  .sub{margin-top:24px}
+  .sub li,.home-row li{padding:6px 0;font-size:.93rem;line-height:1.55}
+  .split figure img{height:230px}
+  .trio img{height:170px}
+  .side-photo img{height:260px}
+  .city-card{display:none}
+  .map-row{grid-template-columns:1fr}
+  .map-box{padding:6px;width:100%;max-width:600px;margin:0 auto}
+  #bymap .city text{opacity:1 !important;font-size:12px}
+  .culture{margin-top:22px}
+  .by-photos{display:none}
+}
+</style>
+</head>
+<script>
+(function(){
+  var t;
+  try{t=localStorage.getItem('theme')}catch(e){}
+  if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  document.documentElement.dataset.theme=t;
+})();
+</script>
+<body>
+
+<nav class="topnav" aria-label="Разделы">
+  <div class="wrap">
+    <a class="brand" href="#top">Александр Телегин</a>
+    <ul>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#work">Чем занимаюсь</a></li>
+      <li><a href="#facts">Факты</a></li>
+      <li><a href="#belarus">Беларусь</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">☰</button>
+    <button class="theme-toggle" type="button" aria-label="Переключить тему" title="Светлая / тёмная тема">◐</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-row">
+    <div class="hero-text">
+    <div class="eyebrow">Визитка</div>
+    <h1>Александр Телегин</h1>
+    <p>Занимаюсь производством, продажей и установкой изделий из дерева и металла. За плечами — годы продаж и маркетинга в промышленном B2B.</p>
+    </div>
+    <img class="me" src="images/web/portrait.jpg" alt="Александр Телегин">
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap cols">
+    <div>
+      <h2>Обо мне</h2>
+      <p>Меня зовут <strong>Александр Телегин</strong>, я из Минска. Много лет я продавал и продвигал чужую продукцию в промышленных B2B-компаниях, а теперь строю своё дело.</p>
+      <p>Умею работать и с цифрами, и с людьми: с новыми людьми быстро нахожу общий язык, команду вести тоже приходилось. <strong>Слово держу</strong>: если пообещал, сделаю, приду вовремя и сроки не сорву. Люблю ясные договорённости и открытый разговор.</p>
+      <p>Вне работы живу активно: спорт, поездки, друзья. Впечатления для меня важнее вещей, поэтому деньги чаще трачу на дорогу и тренировки, а самой заметной покупкой последних лет стал велосипед. Люблю свою страну, её города, усадьбы и озёра, и стараюсь видеть её не только из окна офиса.</p>
+      <h3>Сильные стороны</h3>
+      <ul class="timeline">
+        <li><strong>Рынок и цифры.</strong> Умею разбираться в рынке: проводил исследования, анализировал конкурентов, считал цены.</li>
+        <li><strong>Переговоры.</strong> Договариваюсь с людьми, в том числе с зарубежными партнёрами, и не боюсь командировок.</li>
+        <li><strong>Команда.</strong> Умею работать в команде и руководить ею.</li>
+        <li><strong>Надёжность.</strong> Не срываю сроки и делаю то, что обещал.</li>
+        <li><strong>Обучаемость.</strong> Быстро вхожу в новые сферы, в том числе далёкие от моей основной.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Коротко о пути</h3>
+      <ul class="timeline">
+        <li><strong>2010–2015 · Белорусский государственный университет.</strong> Международные отношения, «Мировая экономика», бакалавр. Английский и испанский.</li>
+        <li><strong>Опыт работы.</strong> Маркетинг и продажи в B2B-промышленности, более 30 зарубежных командировок. Был и руководителем: управлял командой и компанией.</li>
+        <li><strong>Курсы.</strong> Маркетинг и бизнес-анализ.</li>
+      </ul>
+      <figure class="side-photo"><img src="images/web/20210826_111433.jpg" alt="Александр в деловом костюме в Минске" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="work">
+  <div class="wrap">
+    <h2>Чем занимаюсь</h2>
+    <p>У меня своё дело: <strong>производство, продажа и установка изделий из дерева и металла</strong>. Веду заказ целиком: от подбора решения и расчёта до готового изделия на месте.</p>
+    <p>Хочу, чтобы за моими изделиями стояли качество и репутация честного партнёра. Много лет продвигал чужое, теперь продвигаю своё.</p>
+    <h3>Что делаю</h3>
+    <div class="cards">
+      <div class="card"><h3>Экраны для батарей</h3><p>Закрывают радиаторы и становятся частью интерьера, а не тем, что хочется спрятать.</p></div>
+      <div class="card"><h3>Корзины для кондиционеров</h3><p>Защищают наружные блоки и аккуратно смотрятся на фасаде.</p></div>
+      <div class="card"><h3>Декоративные панели</h3><p>Для стен, перегородок и зонирования пространства.</p></div>
+      <div class="card"><h3>Элементы дизайна</h3><p>Детали из дерева и металла для квартир и офисов.</p></div>
+    </div>
+    <h3>Как работаю</h3>
+    <ul class="timeline steps">
+      <li><strong>Производство.</strong> Изготавливаем изделия из дерева и металла сами, поэтому отвечаем за качество на каждом этапе.</li>
+      <li><strong>Продажа.</strong> Подбираю решение под задачу и бюджет, считаю стоимость честно и заранее.</li>
+      <li><strong>Установка.</strong> Привозим и монтируем, чтобы клиент получил готовый результат, а не коробку с деталями.</li>
+    </ul>
+    <div class="resources">
+      <h3>Ищу новые ниши</h3>
+      Ищу новые направления для производства и продаж: смотрю, какие изделия из дерева и металла нужны людям и бизнесу, изучаю рынок и конкурентов, считаю себестоимость и цену. Здесь пригождается весь мой опыт: B2B-продажи и маркетинг, аналитика, переговоры, английский и испанский. Параллельно осваиваю нейросети и пробую их в работе.
+    </div>
+    <div class="how">
+      <h3>Как со мной работать</h3>
+      Я <strong>держу данное слово</strong>: если пообещал, значит, сделаю. Ценю надёжность и пунктуальность и в себе, и в партнёрах, поэтому прихожу вовремя и сроки не срываю. Люблю ясные договорённости и открытый разговор.
+    </div>
+  </div>
+</section>
+
+<section id="facts">
+  <div class="wrap">
+    <h2>Факты обо мне</h2>
+    <p>Небольшое досье. Работа работой, но жизнь у меня не ограничивается переговорами и таблицами. Сейчас, например, осваиваю <strong>нейросети</strong>: для меня это новая область.</p>
+
+    <div class="sub" id="sport">
+      <h3>Спорт</h3>
+      <div class="photos">
+        <figure><img src="images/web/IMG_20231002_150627_588.JPG" alt="Старт забега, Александр с поднятым кулаком" style="object-position:50% 58%" loading="lazy"><figcaption>Старт с командой</figcaption></figure>
+        <figure><img src="images/web/IMG_20230709_192934_011.JPG" alt="Александр на препятствии в гонке OCR" style="object-position:50% 55%" loading="lazy"><figcaption>Препятствия OCR</figcaption></figure>
+        <figure><img src="images/web/insta-bison-race.jpg" alt="Александр ползёт под колючей проволокой на Bison Race" loading="lazy"><figcaption>Bison Race, под колючей проволокой</figcaption></figure>
+        <figure><img src="images/web/insta-half-marathon.jpg" alt="Александр с медалью на стадионе после забега" style="object-position:50% 30%" loading="lazy"><figcaption>Минский полумарафон, 10 км</figcaption></figure>
+        <figure><img src="images/web/insta-sol-polesya.jpg" alt="Александр с велосипедом на соляном отвале" style="object-position:50% 40%" loading="lazy"><figcaption>«Соль Полесья», 85 км</figcaption></figure>
+        <figure><img src="images/web/insta-bike.jpg" alt="Александр с новым гравийным велосипедом" style="object-position:50% 45%" loading="lazy"><figcaption>Новый гравийник, весна 2026</figcaption></figure>
+      </div>
+      <ul>
+        <li>Любительский спорт: <strong>бег</strong>, <strong>велоспорт</strong>, <strong>OCR</strong> (гонки с препятствиями) и <strong>тренажёрный зал</strong>. Люблю разнообразие, а после тренировки лучше думается.</li>
+        <li><strong>OCR.</strong> С 2023 года бегаю Bison Race в команде OCR Hub, с тренером. Первый командный старт прошёл меньше чем через полгода тренировок, и на дистанции, и на препятствиях я почувствовал себя заметно сильнее.</li>
+        <li><strong>Бег.</strong> На первом для себя Минском полумарафоне пробежал 10 км по летнему утреннему городу и финишировал ровно в середине категории: 223-е место из 445. Есть куда расти.</li>
+        <li><strong>Велосипед.</strong> Люблю встать на рассвете и проехать сотню по пустому городу и окрестностям. Весной 2026 года купил гравийный велосипед, а летом проехал 85 км на «Соли Полесья» по соляным горам под Солигорском.</li>
+        <li><strong>Вода и зима.</strong> Летом плаваю и катаюсь на сапах, зимой иногда встаю на лыжи. Но зима всё-таки не мой сезон: жду, когда откроется велосезон.</li>
+      </ul>
+    </div>
+
+    <div class="sub split" id="abroad">
+      <figure><img src="images/web/1.jpg" alt="Александр на балконе отеля с видом на море" style="object-position:60% 50%" loading="lazy"></figure>
+      <div>
+        <h3>Путешествия</h3>
+        <p>Люблю новые места, города и страны. Языки в поездках пригождаются, а командировки научили быстро осваиваться где угодно.</p>
+        <ul>
+          <li><strong>Турция</strong>: море и отдых, 2020 и 2022 годы.</li>
+          <li><strong>Эмираты</strong>: с детства нравятся небоскрёбы, но столько сразу я не мог представить даже в детских фантазиях.</li>
+          <li><strong>Польша</strong>: Краков, в гостях у друга детства.</li>
+          <li><strong>Литва</strong>: весенний Вильнюс.</li>
+          <li><strong>Словения и Хорватия</strong>: горы, озёра и прогулка с местным гидом.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub split reverse" id="friends">
+      <figure><img src="images/web/insta-travel-sea.jpg" alt="Александр на балконе у моря" style="object-position:50% 30%" loading="lazy"></figure>
+      <div>
+        <h3>Друзья</h3>
+        <p>Хороший разговор за столом ценю не меньше, чем удачную сделку.</p>
+        <ul>
+          <li>У меня большая дружная компания: дни рождения, свадьбы друзей, поездки на выходные.</li>
+          <li>Летом берём сапы на целый день или выбираемся в фан-зону на футбол, осенью ходим пешком по лесу.</li>
+          <li>Прокачал навык жарки мяса: ростбиф на гриле у меня получается.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub" id="home">
+      <h3>Дома</h3>
+      <div class="home-row">
+        <div class="trio">
+          <figure><img src="images/web/photo_2026-04-13_20-13-09.jpg" alt="Александр обнимает кошку Лёлю" style="object-position:50% 40%" loading="lazy"><figcaption>Лёля</figcaption></figure>
+          <figure><img src="images/web/2.jpg" alt="Кошка спит на диване" style="object-position:58% 58%" loading="lazy"><figcaption>Хозяйка квартиры на дежурстве</figcaption></figure>
+          <figure><img src="images/web/photo_2026-08-05_09-25-11.jpg" alt="Кошка лежит рядом с медалями" style="object-position:30% 40%" loading="lazy"><figcaption>Охраняет медали</figcaption></figure>
+        </div>
+        <ul>
+          <li>У меня живёт <strong>кошка Лёля</strong>. Она, конечно, главная в доме, и все это понимают.</li>
+          <li>Раньше она <strong>жила на улице</strong>. Летом 2025 года я взял её на три дня на передержку после операции, а она решила остаться.</li>
+          <li>Сначала пугалась каждого шороха, а теперь ласковая и общительная, и у неё <strong>своя квартира в столице</strong>. Карьера, по любым меркам, удалась.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="belarus" class="belarus">
+  <div class="wrap">
+    <h2>Путешествия по Беларуси</h2>
+    <p>Беларусь я люблю смотреть вживую: старые города, усадьбы и замки, озёра, санатории. Чаще всего езжу на выходные, иногда на велосипеде.</p>
+    <div class="stat"><span><b id="city-count">28</b> городов</span><span>все <b>6</b> областей</span><span>столица — дома</span></div>
+    <div class="map-row">
+      <div class="map-box"><svg id="bymap" role="img" aria-label="Карта Беларуси с отмеченными городами"></svg><p class="map-src">Границы: geoBoundaries, CC BY 3.0</p></div>
+      <div class="city-card" id="city-card" aria-live="polite">
+        <p class="hint">Наведите на точку на карте.</p>
+      </div>
+    </div>
+    <div class="culture" id="culture">
+      <h3>Белорусская культура</h3>
+      <p>Беларусь для меня не только места на карте. Мне интересно, чем она живёт: язык, книги, музыка, история. И, конечно, кухня: белорусские блюда и авторские напитки я пробую при любой возможности.</p>
+      <div class="cards">
+        <div class="card"><h3>Язык</h3><p>Иногда пишу по-белорусски и ценю места, где можно побыть в белорусскоязычной среде, как в парке «Сула».</p></div>
+        <div class="card"><h3>Книги</h3><p>Читаю белорусскую литературу: через книги лучше понимаешь страну и людей.</p></div>
+        <div class="card"><h3>Музыка</h3><p>Слушаю белорусскую музыку и открываю для себя новых исполнителей.</p></div>
+        <div class="card"><h3>История и спадчына</h3><p>Интересуюсь историей Беларуси: как жили люди в разные эпохи и как прошлое повлияло на сегодняшний день.</p></div>
+      </div>
+    </div>
+    <div class="by-photos">
+      <figure><img src="images/web/photo_2026-08-22_13-59-11.jpg" alt="Александр у белого дворца усадьбы" style="object-position:50% 45%" loading="lazy"><figcaption>Усадьбы Беларуси</figcaption></figure>
+      <figure><img src="images/web/insta-grodno.jpg" alt="Александр в Гродно" style="object-position:50% 40%" loading="lazy"><figcaption>Гродно</figcaption></figure>
+      <figure><img src="images/web/IMG_20210728_191007_594.jpg" alt="Александр с велосипедом на берегу озера" style="object-position:50% 62%" loading="lazy"><figcaption>На озере, лето 2021</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <h2>Контакты</h2>
+    <p>Открыт к сотрудничеству и новым проектам. Нужен экран для батареи, корзина для кондиционера, декоративная панель или есть идея для совместного производства — напишите или позвоните, отвечу в рабочее время.</p>
+    <ul class="contacts-list">
+      <li><span class="label">Почта</span><a href="mailto:alejandrotelegin1993@gmail.com">alejandrotelegin1993@gmail.com</a></li>
+      <li>
+        <span class="label">Телефон</span>
+        <a href="tel:+375447143845">+375 44 714-38-45</a>
+        <span class="messengers">
+          <a href="viber://chat?number=%2B375447143845" aria-label="Viber" title="Viber"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.9 2 3.5 3.3 3.5 9.5c0 3.3.9 5.4 2.6 6.6V21l3.3-2.9c.9.2 1.8.3 2.6.3 5.1 0 8.5-1.3 8.5-7.9S17.100 2 12 2zm3.800 14.200c-.4.4-1 .6-1.500.4-2.900-.9-5.200-3.100-6.200-6-.2-.5 0-1.100.4-1.500l.7-.7c.2-.2.500-.2.700 0l1.200 1.500c.1.200.1.400 0 .6l-.4.600c.6 1.200 1.500 2 2.700 2.600l.6-.4c.2-.1.400-.1.600 0l1.500 1.200c.2.200.2.500 0 .700l-.9.900z"/></svg></a>
+          <a href="https://t.me/+375447143845" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.500 3.300 2.800 10.500c-1.300.5-1.300 1.200-.2 1.500l4.800 1.500 1.800 5.600c.2.600.1.800.7.800.5 0 .7-.2 1-.5l2.300-2.200 4.800 3.500c.9.500 1.500.2 1.700-.8l3.100-14.800c.3-1.300-.5-1.900-1.300-1.800zM9 13.800l9.300-5.900c.4-.3.800-.1.500.2l-7.700 7-.3 3.200L9 13.800z"/></svg></a>
+        </span>
+      </li>
+      <li><span class="label">Instagram</span><a href="https://www.instagram.com/alejandro.telegin/" target="_blank" rel="noopener">@alejandro.telegin</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  Александр Телегин · Минск, Беларусь
+</div></footer>
+
+<script>
+/* тема */
+document.querySelector('.theme-toggle').addEventListener('click',function(){
+  var r=document.documentElement,t=r.dataset.theme==='dark'?'light':'dark';
+  r.dataset.theme=t;
+  try{localStorage.setItem('theme',t)}catch(e){}
+});
+
+/* меню: мобильная кнопка и подсветка текущего раздела */
+(function(){
+  var nav=document.querySelector('.topnav'),btn=nav.querySelector('.nav-toggle'),links=nav.querySelectorAll('ul a');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);
+  });
+  links.forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded',false)})});
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)});
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)});
+})();
+
+/* карта Беларуси: границы страны и областей (geoBoundaries, CC BY 3.0) и города по координатам */
+(function(){
+  var SHAPES={"gm":"M513.0 340.3L497.7 335.5L498.0 331.2L490.8 323.6L491.8 318.7L484.6 318.9L481.5 321.3L474.6 321.8L474.1 323.8L472.1 324.2L471.2 320.6L466.6 320.3L466.1 315.7L464.7 318.8L459.0 321.8L455.6 321.1L454.8 323.6L442.6 327.2L440.0 325.6L439.5 321.7L436.2 318.6L429.3 316.2L426.3 319.5L426.4 316.4L425.1 315.4L423.3 317.4L422.0 314.6L416.7 319.3L419.0 328.8L416.9 330.9L418.0 333.7L415.8 336.8L411.5 335.5L409.6 340.0L410.3 342.3L413.0 343.2L411.3 346.8L415.6 350.9L414.6 354.3L412.2 354.8L412.2 353.5L409.0 352.6L404.0 353.1L397.7 357.2L396.0 354.6L394.8 356.1L384.0 350.8L379.9 357.8L379.9 361.8L372.2 362.4L371.2 366.6L367.1 371.2L361.4 372.7L363.1 377.1L358.4 380.0L356.5 378.6L342.2 380.5L339.6 383.6L340.2 394.4L334.5 399.8L326.8 401.2L325.4 399.4L322.7 400.3L321.2 396.4L313.2 397.2L312.5 404.4L309.3 406.6L298.2 405.4L296.4 401.1L292.7 400.1L292.3 394.9L288.2 394.2L282.0 396.8L279.5 396.3L276.1 399.6L276.9 405.0L270.3 412.6L270.7 416.3L277.3 416.7L279.1 420.1L282.7 420.1L285.7 422.1L288.3 428.2L286.5 430.5L285.9 441.5L290.7 445.3L291.1 447.7L285.3 453.7L286.1 459.3L284.0 463.5L287.0 467.4L286.0 471.4L287.1 473.5L283.0 476.3L282.9 477.9L285.2 486.3L296.8 489.1L296.9 492.2L293.8 496.3L298.4 501.4L300.8 496.4L303.5 495.0L303.0 486.1L307.9 487.5L309.1 491.1L310.8 490.8L309.9 492.9L317.0 492.9L323.0 487.5L323.1 484.8L328.7 481.8L328.6 487.0L331.2 488.4L334.4 495.0L340.6 490.0L352.1 492.8L353.7 503.8L355.5 504.7L356.4 503.1L357.3 506.4L359.7 504.1L358.6 499.8L361.5 494.4L365.9 491.2L373.3 491.7L380.4 483.6L387.7 493.5L386.9 500.1L390.7 504.9L391.7 510.6L397.9 507.3L402.2 508.8L404.1 500.3L406.6 502.7L414.4 496.7L416.4 498.0L418.3 504.2L422.8 504.3L424.7 503.8L425.7 500.8L431.3 500.8L433.1 497.5L438.5 498.4L442.6 497.0L452.6 505.2L453.2 510.0L451.6 511.2L454.4 515.0L459.9 516.8L460.6 519.8L464.1 521.3L467.7 520.2L469.0 515.8L472.3 513.3L466.8 505.1L466.8 503.0L469.4 501.6L466.1 493.2L463.5 492.2L464.9 486.5L463.1 481.1L465.2 480.1L465.4 477.6L468.7 476.6L468.9 470.8L473.5 461.0L479.7 457.4L479.6 454.0L483.8 447.8L488.6 449.7L490.5 440.3L496.1 440.6L499.8 438.6L505.0 443.5L508.5 444.1L510.3 442.3L511.0 438.0L514.5 437.0L515.3 434.3L520.3 436.7L529.0 436.8L535.2 438.7L538.1 436.5L537.4 430.3L532.1 428.6L532.9 420.7L529.4 420.0L526.2 416.3L527.8 406.7L526.0 406.0L527.0 399.5L524.8 396.8L529.4 392.2L524.5 389.4L523.9 384.5L520.3 379.1L524.2 377.3L525.8 371.7L522.2 367.7L522.5 363.5L517.1 361.0L513.0 355.6L512.0 351.1L505.3 346.8L506.0 345.5L509.8 345.8L510.5 340.5Z","vt":"M499.9 201.4L494.9 197.9L501.2 185.9L501.6 181.3L490.7 180.8L490.7 177.1L488.1 176.8L485.0 172.4L481.7 172.0L480.7 169.1L476.1 166.9L478.1 161.4L480.0 160.3L480.1 153.9L486.2 153.5L487.3 148.9L485.7 146.0L491.1 144.8L489.3 140.2L490.4 135.0L488.7 133.9L488.8 130.1L485.9 128.9L483.9 122.4L479.4 120.3L480.0 115.6L485.6 110.7L483.9 102.6L486.7 99.7L484.8 96.4L487.0 94.1L485.8 86.9L483.7 87.8L482.4 86.1L479.2 89.7L476.1 89.9L474.4 83.3L471.5 85.0L467.9 75.9L462.3 74.2L460.7 68.5L452.4 67.8L448.3 65.3L448.1 63.1L443.1 62.1L438.5 66.5L429.6 61.0L427.8 62.5L424.7 61.9L418.3 70.1L415.3 68.1L409.9 70.0L400.6 78.7L392.7 71.9L395.3 65.0L395.6 58.0L399.7 56.0L397.3 51.6L392.7 51.3L389.6 49.1L384.9 49.7L382.9 45.8L377.1 44.8L368.2 47.7L363.5 50.7L363.5 52.6L356.3 52.9L354.7 44.9L352.1 42.6L352.8 39.2L348.4 37.6L337.6 38.1L336.6 41.7L331.7 42.2L331.0 39.9L329.2 39.9L329.5 37.2L323.1 33.0L323.3 30.5L315.9 36.1L311.3 36.5L307.7 43.6L302.1 45.2L303.1 47.0L301.0 50.7L292.8 56.1L290.1 70.6L275.8 67.9L271.6 70.8L266.4 65.7L261.6 63.9L259.4 66.3L255.1 66.3L250.2 69.9L247.0 77.1L241.3 80.9L237.3 78.7L232.9 79.3L232.5 91.0L229.9 95.4L226.0 97.6L228.2 102.8L228.2 110.3L221.9 114.7L228.3 117.4L234.8 115.6L242.3 117.3L244.7 120.5L238.3 125.4L238.0 128.2L235.4 130.3L236.9 132.5L234.5 133.7L227.1 135.1L225.7 133.5L222.3 136.3L216.4 134.4L209.0 138.5L210.9 142.4L207.5 148.6L211.4 155.0L215.6 153.4L216.6 151.0L229.0 155.7L231.8 151.9L238.4 154.1L240.2 152.5L243.2 153.1L243.2 149.2L247.7 148.1L251.1 150.1L251.8 152.7L258.2 151.7L258.9 149.8L270.0 150.5L270.0 153.1L273.5 156.5L273.1 159.9L276.3 163.2L282.1 164.7L284.3 166.6L284.5 169.6L287.3 168.8L287.5 172.7L295.9 175.4L296.3 182.6L300.7 188.8L306.4 186.3L307.6 188.8L312.9 189.0L314.2 190.7L325.4 183.2L329.1 185.1L330.3 188.9L334.0 190.3L334.9 194.1L336.9 194.9L339.7 190.9L341.7 183.9L350.7 183.2L354.0 189.0L353.8 192.3L358.9 191.3L362.0 193.5L366.3 192.3L365.9 189.1L372.7 191.9L374.3 189.0L378.8 186.5L386.1 187.4L384.8 192.0L388.6 193.8L393.2 191.7L394.8 189.1L395.9 190.6L399.4 188.0L401.2 190.5L399.4 192.4L399.0 200.1L396.6 204.1L398.5 206.1L397.2 208.5L398.0 210.8L393.1 213.9L396.2 218.4L392.4 225.1L394.3 226.5L401.8 223.8L403.2 220.0L406.2 219.0L405.8 216.8L408.1 215.8L413.3 218.5L421.8 216.8L423.4 217.7L425.4 215.5L426.7 220.8L430.2 220.2L431.8 221.7L432.7 218.1L434.9 217.7L434.8 214.2L437.0 215.1L438.3 211.1L441.9 212.9L442.2 215.8L444.0 212.7L447.5 213.4L448.5 215.1L446.8 219.2L447.9 219.8L451.5 219.9L452.6 217.0L454.8 217.2L456.3 215.4L460.0 219.1L459.8 221.6L462.1 222.4L465.0 218.7L464.9 216.1L467.6 214.3L465.6 211.4L471.2 209.8L472.1 206.3L476.6 207.5L477.0 209.4L481.3 208.9L485.5 204.8L490.9 206.1L492.1 208.4Z","gr":"M207.5 148.6L202.1 150.7L197.8 155.3L194.8 153.7L188.4 155.4L179.4 169.5L181.1 191.4L176.3 195.8L172.5 203.4L173.8 206.8L167.9 215.7L172.0 218.5L175.5 216.9L177.4 217.9L177.7 221.6L180.0 222.0L182.7 225.7L180.8 227.4L182.4 233.3L178.0 232.7L176.9 235.3L173.9 236.3L168.2 233.7L166.9 231.3L169.6 229.4L169.0 227.6L170.5 226.4L169.5 221.6L167.6 221.6L166.0 218.5L155.6 223.0L152.6 222.2L149.9 223.3L148.2 227.3L140.5 235.4L136.0 234.9L133.4 232.0L126.2 234.5L123.2 237.7L125.6 244.6L127.9 246.0L125.3 249.1L118.6 252.3L118.6 247.9L117.3 246.8L113.7 248.1L103.1 258.5L97.5 258.9L91.7 253.9L89.5 254.0L88.7 252.0L76.1 256.2L72.1 252.3L69.6 254.5L67.9 253.0L64.5 258.4L59.9 255.0L53.9 256.5L48.4 253.3L48.2 260.9L50.6 264.2L49.8 268.5L59.0 303.7L66.2 324.5L72.3 332.2L69.7 340.9L74.1 352.9L72.2 356.6L73.6 371.3L82.4 370.6L84.9 367.9L88.4 373.5L90.9 372.9L91.9 374.1L92.5 371.8L96.7 372.9L101.7 371.6L105.0 374.4L111.3 373.2L111.0 369.3L113.1 364.8L111.6 361.5L115.4 358.0L114.0 355.9L114.7 354.2L119.2 350.1L121.1 353.9L122.7 352.7L126.4 354.6L134.7 353.2L137.2 359.9L140.7 356.3L140.4 364.3L143.4 364.8L145.8 362.2L148.8 364.5L152.6 360.2L152.9 363.6L156.1 364.6L157.6 362.1L155.2 361.3L156.3 358.2L154.9 354.4L161.2 354.1L162.9 348.8L171.1 343.1L172.1 332.7L170.1 329.9L172.0 320.3L174.3 319.1L174.8 313.1L178.7 309.2L182.5 311.1L186.5 310.6L188.8 308.7L197.0 312.2L200.4 311.3L215.2 313.5L219.3 311.2L229.1 309.6L227.7 300.2L225.4 298.5L227.1 293.4L216.8 282.8L216.5 279.8L213.0 278.7L211.0 274.1L211.3 269.3L208.7 268.9L208.3 266.9L209.9 266.2L209.9 263.1L217.5 260.0L216.7 257.7L220.9 255.6L220.6 253.2L218.7 249.9L214.5 251.7L213.8 244.3L205.7 247.2L202.7 238.3L203.4 234.6L200.8 234.8L201.1 236.9L199.1 237.2L195.9 234.1L198.2 229.4L200.4 231.0L206.2 226.4L216.2 227.7L221.3 220.4L224.1 219.3L228.7 209.9L233.9 206.0L232.9 203.9L234.5 202.3L234.3 198.8L232.3 196.7L232.0 193.7L235.3 194.3L236.6 185.5L230.6 185.1L227.7 178.7L229.0 174.8L226.7 174.2L221.1 166.6L216.2 167.4L216.3 158.9L212.1 156.9Z","br":"M271.5 409.9L268.4 407.3L265.0 407.2L262.7 400.2L259.0 399.4L257.6 395.6L259.0 393.3L257.2 389.3L259.2 387.7L257.9 384.1L255.8 383.2L258.9 378.9L256.9 377.1L256.3 371.6L253.6 372.4L252.4 374.6L247.2 371.5L243.7 372.0L239.6 364.3L235.4 364.0L231.0 359.9L227.8 365.0L225.8 363.8L221.9 368.3L218.6 364.5L222.6 358.2L218.3 350.3L222.6 348.1L222.5 344.2L226.4 343.9L225.9 340.6L223.6 340.1L222.9 337.1L218.3 336.6L214.3 330.7L211.5 329.5L215.2 323.4L218.3 322.4L218.7 317.4L217.3 316.8L216.9 312.9L197.0 312.2L188.8 308.7L186.5 310.6L182.5 311.1L178.7 309.2L174.8 313.1L174.3 319.1L172.0 320.3L170.1 329.9L172.1 332.7L171.1 343.1L162.9 348.8L161.2 354.1L154.9 354.4L156.3 358.2L155.2 361.3L157.4 361.7L157.0 364.1L152.9 363.6L152.6 360.2L148.8 364.5L145.8 362.2L143.4 364.8L140.4 364.3L140.7 356.3L137.2 359.9L134.7 353.2L126.4 354.6L122.7 352.7L121.1 353.9L119.2 350.1L114.7 354.2L114.0 355.9L115.4 358.0L111.6 361.5L113.1 364.8L111.0 369.3L111.7 372.9L105.0 374.4L101.7 371.6L96.7 372.9L92.5 371.8L91.9 374.1L90.9 372.9L88.4 373.5L84.9 367.9L82.4 370.6L73.6 371.3L73.7 377.8L70.9 381.8L61.8 389.0L54.4 389.4L44.1 396.8L28.7 421.6L30.1 423.6L29.8 427.3L38.3 429.2L42.5 432.4L46.3 432.2L48.8 437.0L50.6 438.6L53.8 438.5L56.4 442.8L58.4 450.5L54.6 458.1L53.7 466.4L55.7 470.5L49.6 477.2L51.3 496.7L56.6 500.3L57.2 491.9L54.8 488.9L56.2 486.7L64.8 484.4L65.8 486.2L71.3 486.6L70.5 490.0L78.2 491.6L81.5 489.4L84.7 483.9L95.7 476.4L94.9 469.7L98.9 462.5L111.2 459.7L118.7 460.4L121.0 462.2L126.1 458.7L127.1 460.1L130.6 458.6L133.7 460.3L140.1 454.8L149.2 453.0L152.6 453.1L156.4 456.3L162.2 457.7L165.6 455.9L180.8 457.6L182.5 454.4L190.2 457.4L195.5 456.2L200.8 457.9L205.8 462.5L218.7 462.1L218.8 466.0L225.9 469.7L229.7 466.7L239.1 467.0L242.9 473.3L245.3 472.4L252.0 474.7L254.1 472.4L266.2 472.3L266.3 482.2L270.4 483.7L268.6 488.6L280.9 487.1L283.8 489.7L285.2 486.3L283.0 476.3L287.1 473.5L286.0 471.4L287.0 467.4L284.0 463.5L286.1 459.3L285.3 453.7L290.1 449.3L291.1 446.3L285.9 441.5L286.5 430.5L288.3 428.2L287.3 424.8L282.7 420.1L279.1 420.1L277.3 416.7L270.7 416.3Z","mg":"M513.0 340.3L514.1 338.3L512.5 335.9L515.0 329.2L523.7 331.4L527.6 327.2L534.2 329.7L537.6 337.4L539.6 339.1L543.1 338.4L544.5 341.3L549.5 339.9L554.7 341.8L559.8 338.8L561.6 339.8L562.7 336.8L564.8 337.7L567.4 336.6L569.3 331.5L573.5 330.7L576.9 325.5L577.5 319.2L582.0 319.9L584.3 315.7L586.6 317.7L588.2 315.3L591.2 316.7L591.6 309.9L594.4 310.2L592.4 308.5L592.5 303.1L587.7 303.1L586.4 300.0L584.1 301.4L583.3 298.5L578.4 295.9L573.8 290.4L572.6 283.7L577.5 279.7L574.8 276.1L569.8 277.3L567.9 273.6L565.3 274.0L564.8 272.0L562.0 272.7L560.8 270.1L558.6 270.2L556.1 267.8L544.6 270.9L535.5 269.2L534.3 266.0L540.4 258.0L539.0 253.9L542.1 252.3L539.4 247.7L542.2 245.9L543.2 242.0L538.2 240.1L534.9 240.9L534.6 237.2L529.4 237.7L528.1 234.6L524.9 235.1L519.5 232.8L512.6 223.7L508.8 224.3L507.3 216.3L508.5 212.5L501.9 200.5L494.4 205.2L492.1 208.4L490.9 206.1L485.5 204.8L481.3 208.9L477.0 209.4L476.6 207.5L472.1 206.3L471.2 209.8L465.6 211.4L467.6 214.3L464.9 216.1L465.0 218.7L462.1 222.4L459.8 221.6L460.0 219.1L456.3 215.4L454.8 217.2L452.6 217.0L451.5 219.9L447.9 219.8L446.8 219.2L448.5 215.1L447.5 213.4L444.0 212.7L442.2 215.8L441.9 212.9L438.3 211.1L437.0 215.1L434.8 214.2L434.9 217.7L432.7 218.1L431.8 221.7L430.2 220.2L426.7 220.8L424.7 215.4L423.4 217.7L421.8 216.8L413.3 218.5L406.5 216.1L406.2 219.0L403.2 220.0L401.8 223.8L396.9 225.5L399.7 228.7L397.4 236.2L398.0 244.9L391.9 249.2L393.9 250.4L395.2 262.2L396.8 263.6L394.4 265.0L393.6 267.7L401.2 269.9L401.1 271.7L395.7 272.2L395.5 273.8L397.3 274.4L394.6 278.1L392.2 276.0L390.6 280.8L384.6 284.4L377.9 282.3L376.4 287.2L377.3 290.7L369.4 292.0L369.3 296.3L367.9 296.4L361.4 289.5L356.7 292.2L350.5 288.9L347.7 294.0L343.0 296.0L346.8 297.4L340.1 298.2L337.6 301.2L335.7 300.2L332.9 302.4L337.7 304.4L336.7 309.6L334.2 312.8L334.8 314.7L338.3 316.7L338.9 321.4L332.9 322.2L331.7 323.8L322.1 321.6L318.7 322.6L320.2 327.4L324.0 328.8L324.8 330.6L328.3 329.8L330.6 331.4L331.9 329.1L334.3 330.5L334.8 334.5L343.3 333.8L345.0 338.7L344.4 345.4L347.0 350.0L345.6 351.9L343.2 350.6L340.1 352.6L341.7 361.0L338.0 364.2L340.5 365.8L340.3 369.8L336.4 373.1L335.7 376.0L342.2 380.5L356.5 378.6L358.4 380.0L363.1 377.1L361.4 372.7L367.1 371.2L371.2 366.6L372.2 362.4L379.9 361.8L379.9 357.8L384.3 350.7L387.9 353.8L392.6 353.9L394.8 356.1L396.0 354.6L397.7 357.2L404.0 353.1L409.0 352.6L412.2 353.5L412.2 354.8L414.6 354.3L415.6 350.9L411.3 346.8L413.0 343.2L410.3 342.3L409.6 340.0L411.5 335.5L415.8 336.8L418.0 333.7L416.9 330.9L419.0 328.8L416.7 319.3L422.0 314.6L423.3 317.4L425.1 315.4L426.4 316.4L426.3 319.5L429.3 316.2L436.2 318.6L439.5 321.7L440.0 325.6L442.6 327.2L454.8 323.6L455.6 321.1L459.0 321.8L464.7 318.8L466.1 315.7L466.6 320.3L471.2 320.6L472.1 324.2L474.1 323.8L474.6 321.8L481.5 321.3L484.6 318.9L491.8 318.7L490.8 323.6L498.0 331.2L497.7 335.5Z","mn":"M342.2 380.5L335.7 376.0L336.4 373.1L340.3 369.8L340.5 365.8L338.0 364.2L341.7 361.0L340.1 352.6L343.2 350.6L345.6 351.9L347.0 350.0L344.4 345.4L345.0 338.7L343.3 333.8L334.8 334.5L334.3 330.5L331.9 329.1L330.6 331.4L328.3 329.8L324.8 330.6L324.0 328.8L320.2 327.4L318.7 322.6L322.1 321.6L331.7 323.8L332.9 322.2L338.9 321.4L338.3 316.7L334.8 314.7L334.2 312.8L336.7 309.6L337.7 304.4L332.9 302.4L335.7 300.2L337.6 301.2L340.1 298.2L346.8 297.4L343.0 296.0L347.7 294.0L350.5 288.9L356.7 292.2L361.4 289.5L367.9 296.4L369.3 296.3L369.4 292.0L377.3 290.7L376.4 287.2L377.9 282.3L384.6 284.4L390.6 280.8L392.2 276.0L394.6 278.1L397.3 274.4L395.5 273.8L395.7 272.2L401.7 270.7L393.6 267.7L394.4 265.0L396.8 263.6L395.2 262.2L393.9 250.4L391.9 249.2L398.0 244.9L397.4 236.2L399.7 228.7L396.9 225.5L394.3 226.5L392.4 225.1L396.2 218.4L393.1 213.9L398.0 210.8L397.2 208.5L398.5 206.1L396.6 204.1L399.0 200.1L399.4 192.4L401.2 190.5L400.3 188.5L398.2 188.2L395.6 190.6L394.8 189.1L393.2 191.7L388.6 193.8L384.8 192.0L386.1 187.4L378.8 186.5L374.3 189.0L372.7 191.9L365.9 189.1L366.3 192.3L362.0 193.5L358.9 191.3L353.8 192.3L354.0 189.0L350.7 183.2L341.7 183.9L339.7 190.9L336.9 194.9L334.9 194.1L334.0 190.3L330.3 188.9L329.1 185.1L325.4 183.2L314.2 190.7L312.9 189.0L307.6 188.8L306.4 186.3L300.7 188.8L296.3 182.6L295.9 175.4L287.5 172.7L287.3 168.8L284.5 169.6L284.3 166.6L282.1 164.7L276.3 163.2L273.1 159.9L273.5 156.5L270.0 153.1L270.0 150.5L258.9 149.8L258.2 151.7L251.8 152.7L251.1 150.1L247.7 148.1L243.2 149.2L243.2 153.1L240.2 152.5L238.4 154.1L231.8 151.9L229.0 155.7L216.2 151.1L215.6 153.4L211.5 155.0L212.1 156.9L216.3 158.9L215.7 166.7L216.9 167.8L221.1 166.6L226.7 174.2L229.0 174.8L227.7 178.7L230.6 185.1L236.6 185.5L235.3 194.3L232.0 193.7L232.3 196.7L234.3 198.8L234.5 202.3L232.9 203.9L233.9 206.0L228.7 209.9L224.1 219.3L221.3 220.4L216.2 227.7L206.2 226.4L200.4 231.0L198.2 229.4L195.9 234.1L199.1 237.2L203.1 234.3L202.7 238.3L205.7 247.2L213.8 244.3L214.5 251.7L218.7 249.9L220.9 254.4L220.5 256.1L216.7 257.7L217.5 260.0L209.9 263.1L209.9 266.2L208.3 266.9L208.7 268.9L211.3 269.3L211.0 274.1L213.0 278.7L216.5 279.8L216.8 282.8L227.1 293.4L225.4 298.5L227.7 300.2L229.1 308.6L228.1 310.3L219.3 311.2L216.9 312.9L217.3 316.8L218.7 317.4L218.3 322.4L215.2 323.4L211.4 328.8L218.3 336.6L222.9 337.1L223.6 340.1L225.9 340.6L226.3 344.5L222.5 344.2L222.6 348.1L218.3 350.3L222.6 358.2L218.6 364.5L221.9 368.3L225.8 363.8L227.8 365.0L231.0 359.9L235.4 364.0L239.6 364.3L243.7 372.0L247.2 371.5L252.4 374.6L253.6 372.4L256.3 371.6L256.9 377.1L258.9 378.9L255.8 383.2L257.9 384.1L259.2 387.7L257.2 389.3L259.0 393.3L257.6 395.2L259.0 399.4L262.7 400.2L265.0 407.2L268.4 407.3L271.6 409.9L276.9 405.0L276.1 399.6L279.5 396.3L282.0 396.8L288.2 394.2L293.0 395.5L292.7 400.1L295.9 400.6L299.2 405.9L311.5 405.9L313.2 397.2L321.2 396.4L322.7 400.3L325.4 399.4L326.8 401.2L335.4 399.5L340.2 394.4L339.6 383.6ZM236.6 163.3L236.1 159.7L238.2 159.0L241.7 161.4L245.2 161.5L246.4 164.2L243.7 166.5L244.1 168.1L241.6 169.1L237.7 165.5L238.1 162.9ZM268.2 197.7L270.9 195.5L272.1 197.2L264.7 202.1L266.1 207.6L261.0 202.9L252.7 202.4L254.0 198.2L264.1 199.4ZM288.0 266.7L280.4 264.4L283.3 261.8L282.1 258.7L283.6 256.8L281.8 254.5L285.5 255.9L290.4 253.2L294.0 255.2L297.3 253.4L298.0 254.7L295.6 258.2L297.0 267.5Z","mc":"M288.0 266.7L297.0 267.5L295.6 258.2L298.0 254.7L297.3 253.4L294.0 255.2L290.4 253.2L285.5 255.9L281.8 254.5L283.6 256.8L282.1 258.7L283.3 261.8L280.4 264.4Z","by":"M536.3 438.2L536.5 433.2L525.1 417.7L527.2 412.3L524.7 389.8L519.9 380.2L522.9 378.9L525.1 375.3L524.3 368.5L521.9 363.5L514.6 359.7L505.8 346.7L512.9 338.6L512.7 333.7L515.2 328.1L526.9 327.2L535.9 329.7L537.3 335.8L544.3 339.2L555.7 340.3L562.3 338.4L591.8 313.0L592.8 303.1L575.3 291.7L573.9 284.2L578.9 280.7L576.0 276.5L556.2 267.0L542.6 271.2L535.2 268.6L539.0 260.4L540.7 252.0L540.0 242.9L534.7 238.5L530.0 238.3L522.2 234.7L509.5 224.7L508.5 214.9L503.4 203.1L495.6 199.7L495.3 197.4L498.3 191.4L496.2 184.4L490.6 178.1L477.3 169.1L480.6 156.8L482.1 154.3L486.6 152.6L491.7 144.2L488.8 133.8L479.2 118.8L481.7 113.6L486.3 109.1L485.7 88.7L483.3 87.2L475.8 89.3L458.6 68.4L445.6 63.6L427.4 63.7L410.8 72.5L403.0 79.7L400.7 79.8L394.7 73.0L393.3 69.3L396.3 59.3L399.0 57.1L396.3 53.2L375.6 45.7L364.1 51.2L362.9 53.9L357.1 53.4L351.4 39.9L344.3 38.5L335.5 40.0L333.6 43.4L331.4 43.9L320.3 32.3L308.5 38.5L301.1 48.9L292.2 57.0L289.5 69.7L272.4 68.3L263.1 64.3L253.3 65.8L245.6 77.6L240.3 80.3L234.4 78.4L232.0 80.2L232.1 89.2L222.5 115.1L228.2 117.6L233.2 116.0L240.8 117.9L243.1 120.0L242.7 122.0L225.3 134.0L211.6 134.4L207.8 146.4L204.6 151.3L189.9 153.6L182.8 161.7L179.6 170.2L179.0 181.5L181.1 190.8L174.8 196.7L168.6 216.3L172.2 217.9L178.1 215.8L183.7 224.3L181.3 233.6L175.6 235.3L168.0 234.5L165.9 230.5L168.2 228.9L169.9 224.7L165.7 218.7L163.6 218.6L159.6 223.2L148.2 227.4L145.7 231.8L140.7 235.4L137.7 235.8L134.4 233.3L127.1 234.7L124.2 238.8L126.6 245.2L125.9 250.6L119.8 252.0L118.1 249.3L113.2 249.8L100.2 260.0L92.9 258.3L91.4 254.4L87.5 252.3L82.1 255.2L60.0 256.6L47.8 254.3L55.9 293.1L68.8 329.4L73.2 347.8L73.3 377.3L62.2 387.5L53.3 389.4L41.5 397.6L27.9 420.8L30.8 426.7L38.7 428.3L53.2 437.8L55.8 441.1L57.1 448.4L49.7 483.6L51.6 495.0L53.8 496.2L55.9 496.7L54.3 488.3L56.4 485.4L62.4 483.8L71.3 485.6L74.9 490.4L79.6 488.0L93.8 474.9L95.7 466.6L100.4 460.5L130.1 458.9L146.3 453.1L150.3 453.0L162.1 456.8L176.6 456.8L181.6 455.2L196.7 458.0L207.4 463.2L220.8 463.4L222.1 467.7L233.0 466.9L249.8 474.0L255.2 472.2L264.1 472.6L266.1 473.9L265.9 481.5L270.8 489.2L278.7 489.3L284.3 486.1L294.6 488.9L296.8 490.8L294.3 499.7L298.2 502.3L302.3 495.7L303.2 488.1L305.2 486.8L312.1 492.4L317.8 492.6L321.3 490.7L323.8 485.2L328.2 483.1L331.9 490.1L338.7 492.4L342.0 490.9L350.2 492.5L352.4 504.3L357.8 507.4L358.3 500.9L360.9 495.6L375.2 485.9L379.1 485.3L382.8 487.2L390.5 510.2L392.3 511.7L412.0 499.1L414.5 499.9L417.1 504.9L421.3 504.8L430.1 500.4L441.7 499.8L451.6 509.0L451.8 513.2L463.6 523.8L464.6 519.2L469.0 515.9L463.8 494.8L464.4 484.7L468.0 478.2L470.2 466.8L479.8 454.3L487.7 448.9L486.0 445.8L487.7 441.1L507.6 440.3L510.5 437.6L515.0 437.0Z"};
+  var R={mn:'Минская область',br:'Брестская область',gr:'Гродненская область',vt:'Витебская область',mg:'Могилёвская область',gm:'Гомельская область'};
+  // [название, долгота, широта, область, тип: 2 — столица, 1 — областной центр]
+  var C=[
+    ['Минск',27.56,53.90,'mn',2],['Брест',23.70,52.10,'br',1],['Гродно',23.83,53.68,'gr',1],['Витебск',30.20,55.19,'vt',1],
+    ['Могилёв',30.34,53.91,'mg',1],['Гомель',30.98,52.44,'gm',1],['Орша',30.42,54.51,'vt',0],['Барановичи',26.01,53.13,'br',0],
+    ['Браслав',27.05,55.64,'vt',0],['Нарочь',26.69,54.85,'mn',0],['Солигорск',27.54,52.79,'mn',0],['Слуцк',27.56,53.03,'mn',0],
+    ['Столбцы',26.73,53.48,'mn',0],['Борисов',28.50,54.23,'mn',0],['Жодино',28.33,54.10,'mn',0],['Молодечно',26.85,54.31,'mn',0],
+    ['Пинск',26.07,52.12,'br',0],['Глубокое',27.69,55.14,'vt',0],['Толочин',29.70,54.41,'vt',0],['Лепель',28.70,54.88,'vt',0],
+    ['Лида',25.30,53.89,'gr',0],['Мосты',24.54,53.41,'gr',0],['Щучин',24.74,53.60,'gr',0],['Слоним',25.32,53.09,'gr',0],
+    ['Сморгонь',26.40,54.48,'gr',0],['Речица',30.40,52.36,'gm',0],['Лельчицы',27.86,51.79,'gm',0],['Житковичи',27.86,52.22,'gm',0]
+  ];
+  var NS='http://www.w3.org/2000/svg',PAD=24,K=100,COS=0.59;
+  function px(lon){return PAD+(lon-23.1)*K*COS}
+  function py(lat){return PAD+(56.25-lat)*K}
+  var svg=document.getElementById('bymap'),obl={};
+  svg.setAttribute('viewBox','0 0 '+Math.round(px(32.85)+PAD+60)+' '+Math.round(py(51.2)+PAD));
+  function path(d,cls){var p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('class',cls);svg.appendChild(p);return p}
+  ['mn','br','gr','vt','mg','gm','mc'].forEach(function(k){obl[k]=path(SHAPES[k],'obl')});
+  path(SHAPES.by,'border');
+
+  var card=document.getElementById('city-card'),nodes=[];
+  function show(i){
+    var c=C[i];
+    nodes.forEach(function(n,j){n.classList.toggle('on',j===i)});
+    Object.keys(obl).forEach(function(k){obl[k].classList.toggle('on',k===c[3]||(k==='mc'&&c[4]===2))});
+    card.innerHTML='<div class="region">'+(c[4]===2?'Столица':R[c[3]])+'</div><h3>'+c[0]+'</h3>';
+  }
+  // мелкие города рисуем первыми, чтобы крупные были сверху
+  C.map(function(c,i){return i}).sort(function(a,b){return C[a][4]-C[b][4]}).forEach(function(i){
+    var c=C[i],g=document.createElementNS(NS,'g'),dot=document.createElementNS(NS,'circle'),t=document.createElementNS(NS,'text');
+    g.setAttribute('class','city'+(c[4]?' major':'')+(c[4]===2?' capital':''));
+    g.setAttribute('tabindex','0');
+    g.setAttribute('role','button');
+    g.setAttribute('aria-label',c[0]);
+    dot.setAttribute('cx',px(c[1]).toFixed(1));dot.setAttribute('cy',py(c[2]).toFixed(1));dot.setAttribute('r',c[4]===2?8:c[4]?6.5:5);
+    t.setAttribute('x',(px(c[1])+10).toFixed(1));t.setAttribute('y',(py(c[2])+4).toFixed(1));
+    t.textContent=c[0];
+    g.appendChild(dot);g.appendChild(t);svg.appendChild(g);
+    nodes[i]=g;
+    g.addEventListener('mouseenter',function(){show(i)});
+    g.addEventListener('focus',function(){show(i)});
+    g.addEventListener('click',function(){show(i)});
+  });
+
+  document.getElementById('city-count').textContent=C.length;
+})();
+</script>
+
+</body>
+</html>
